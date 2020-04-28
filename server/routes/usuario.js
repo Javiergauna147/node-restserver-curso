@@ -112,8 +112,6 @@ app.delete('/usuario/:id', [verificaToken, verificaAdmin_Role], (req, res) => {
 
 	let id = req.params.id;
 
-	//Usuario.findByIdAndRemove(id, (err, usuarioBorrado) =>{
-
 	let cambiaEstado = {
 		estado: false
 	}
@@ -131,10 +129,9 @@ app.delete('/usuario/:id', [verificaToken, verificaAdmin_Role], (req, res) => {
 				ok: false,
 				err:{
 					message: 'usuario no encontrado'
-				} 
+				}
 			});
-		}
-
+		};
 
 		res.json({
 			ok: true,
