@@ -39,7 +39,7 @@ app.get('/productos', verificaToken, (req, res) => {
 
 
 //====================
-// Obtener un productor por id
+// Obtener un producto por id
 //====================
 
 app.get('/productos/:id', verificaToken,(req, res) => {
